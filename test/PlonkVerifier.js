@@ -21,8 +21,8 @@ describe("PlonkVerifier", function () {
         it("deploy and verify should pass", async function () {
             const verifier = await loadFixture(deployAddVerifier);
 
-            const proof_bytes = fs.readFileSync('./data/proof.proof');
-            const pis_json = JSON.parse(fs.readFileSync('./data/public.wit'));
+            const proof_bytes = fs.readFileSync('./data/add_proof.proof');
+            const pis_json = JSON.parse(fs.readFileSync('./data/add_public.wit'));
             
             const pis_arr = pis_json.X.concat(pis_json.Y);
 
